@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <title>마포 셔츠룸 블로그 | 주식투자 셔츠룸의 진실</title>
+    <meta name="description" content="마포 셔츠룸, 주식투자와 셔츠룸의 완벽한 조합. 원초적 수익, 감각적 공간. 지금 010-6279-0862로 다이렉트 콜. SF T3 PBN 사이트.">
+    <meta name="keywords" content="마포 셔츠룸, 주식투자, 브루탈리즘, PBN, 마포, 셔츠룸 추천, 마포 주식, 투자 셔츠룸, sf-t3">
+    <link rel="canonical" href="https://sf-t3-1779642675702-046.vercel.app/">
+    <meta property="og:title" content="마포 셔츠룸 | 주식투자 끝판왕">
+    <meta property="og:description" content="마포 셔츠룸, 주식투자와 셔츠룸의 완벽한 조합. 원초적 수익, 감각적 공간.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', 'Noto Sans KR', system-ui, -apple-system, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        section {
+            padding: 80px 0;
+            border-bottom: 2px solid #ff003c;
+        }
+        h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            color: #ff003c;
+            text-shadow: 4px 4px 0 #00ffcc;
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #00ffcc;
+            margin-bottom: 30px;
+            border-left: 8px solid #ff003c;
+            padding-left: 20px;
+        }
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ff003c;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #b0b0b0;
+        }
+        a {
+            color: #00ffcc;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            transition: all 0.2s;
+        }
+        a:hover {
+            color: #ff003c;
+            text-decoration: none;
+        }
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background: #ff003c;
+            color: #0a0a0a;
+            font-weight: 800;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border: 3px solid #00ffcc;
+            box-shadow: 6px 6px 0 #00ffcc;
+            transition: all 0.15s;
+        }
+        .btn:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 2px 2px 0 #00ffcc;
+            background: #00ffcc;
+            color: #0a0a0a;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+        }
+        .card {
+            background: #141414;
+            border: 2px solid #333;
+            padding: 30px;
+            transition: all 0.3s;
+        }
+        .card:nth-child(2n) {
+            border-color: #ff003c;
+        }
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        .card .meta {
+            font-size: 0.8rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            z-index: 1000;
+            padding: 15px 0;
+            border-bottom: 2px solid #ff003c;
+        }
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #ff003c;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        nav .menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        nav .menu a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        nav .menu a:hover {
+            color: #00ffcc;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .hamburger span {
+            width: 30px;
+            height: 3px;
+            background: #ff003c;
+            transition: all 0.3s;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.8rem; }
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+            nav .menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #0a0a0a;
+                flex-direction: column;
+                padding: 20px;
+                border-bottom: 2px solid #ff003c;
+            }
+            nav .menu.active { display: flex; }
+            .hamburger { display: flex; }
+        }
+        .tel-link {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #00ffcc;
+            color: #0a0a0a;
+            font-weight: 800;
+            text-decoration: none;
+            border: 2px solid #ff003c;
+            font-size: 1.1rem;
+            transition: all 0.2s;
+        }
+        .tel-link:hover {
+            background: #ff003c;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">마포 셔츠룸</a>
+            <div class="hamburger" onclick="document.querySelector('.menu').classList.toggle('active')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu">
+                <li><a href="/">홈</a></li>
+                <li><a href="/about">소개</a></li>
+                <li><a href="/blog">블로그</a></li>
+                <li><a href="/contact">연락처</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section style="padding-top: 140px;">
+        <div class="container">
+            <h1>주식투자 vs 셔츠룸</h1>
+            <p style="font-size: 1.3rem; color: #ff003c; font-weight: 700;">진짜 수익은 어디서 나오는가</p>
+            <p>마포 셔츠룸. 너는 아마 이 단어를 검색하다가 여기까지 왔을 거야. 주식 차트 보다가 눈이 빠질 것 같아서? 아니면 그냥 궁금해서? 어느 쪽이든 넌 이미 우리의 타겟이다. 이 글은 주식투자와 셔츠룸이라는 두 세계를 완전히 다른 시각으로 조명한다. 대부분의 찌질한 블로그들은 "주식투자로 돈 벌고 셔츠룸 가라"는 식의 뻔한 소리나 한다. 하지만 진짜 게임은 다르다.</p>
+            <p>주식투자에서 수익을 내는 놈들은 전체의 5%도 안 된다. 나머지 95%는 그냥 도박에 인생 걸고 있는 거야. 반면 마포 셔츠룸은? 여기는 현실이다. 현금이 오가는 실제 비즈니스. 네가 주식 차트에서 보는 빨간 불, 파란 불보다 훨씬 직관적인 수익 구조. 들어와서 직접 확인해라. 010-6279-0862. 전화 한 통이면 모든 게 바뀐다.</p>
+            <a href="tel:010-6279-0862" class="tel-link">☎ 010-6279-0862 지금 전화</a>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>마포 셔츠룸이 주식보다 나은 이유</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <div class="meta">리얼리티 체크</div>
+                    <h3>주식은 휴지조각이 될 수 있다</h3>
+                    <p>코스피 3000 찍었다고 좋아하다가 다음날 2500으로 떡락. 네가 믿는 그 기업, 알고 보니 분식회계. 주식은 누군가의 장난감일 뿐이다. 마포 셔츠룸은? 실물 경제다. 손님이 오고, 서비스가 제공되고, 현금이 바로 굴러간다. 변동성 제로.</p>
+                </div>
+                <div class="card">
+                    <div class="meta">감각의 차이</div>
+                    <h3>차트 말고 실제 감각</h3>
+                    <p>주식은 눈으로만 하는 거야. 모니터 속 숫자에 감정을 태우는 거. 하지만 마포 셔츠룸은 모든 감각을 깨운다. 조명, 음악, 분위기, 그리고 인간적인 연결. 이게 진짜 자본주의의 맛이다. 네가 그동안 놓치고 있던 것.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>주식투자자들이 모르는 셔츠룸의 진실</h2>
+            <p>자, 솔직히 말해봐. 너는 왜 주식에 투자해? 돈을 벌기 위해서지? 근데 왜 셔츠룸은 안 가? 돈을 벌었으니 써야 하지 않나? 아니면 아직 못 벌었어? 그게 문제다. 대부분의 주식투자자들은 수익을 내지도 못하면서, 수익 냈다고 착각하며 산다. 마포 셔츠룸은 그런 착각을 깨부순다.</p>
+            <p>여기는 현실이다. 네가 주식으로 100만원 벌었다고? 축하한다. 근데 그 100만원으로 뭘 할 수 있지? 아무것도. 하지만 마포 셔츠룸에서의 경험은 평생 간다. 그리고 그 경험은 네가 다음 투자에서 더 냉철해지게 만든다. 일종의 마인드 리셋인 셈이다.</p>
+            <div class="grid-3" style="margin-top: 40px;">
+                <div class="card">
+                    <div class="meta">STEP 1</div>
+                    <h3>차트 닫아라</h3>
+                    <p>모니터 전원을 꺼. 네가 보고 있는 건 과거의 데이터일 뿐이다. 미래는 네 앞에 있다.</p>
+                </div>
+                <div class="card">
+                    <div class="meta">STEP 2</div>
+                    <h3>전화를 걸어라</h3>
+                    <p>010-6279-0862. 이 번호가 네 인생의 터닝포인트다. 망설이지 마.</p>
+                </div>
+                <div class="card">
+                    <div class="meta">STEP 3</div>
+                    <h3>현실을 경험해라</h3>
+                    <p>마포 셔츠룸에 도착하면 모든 게 명확해진다. 이게 진정한 수익의 의미다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>자주 묻는 헛소리들</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>주식으로 돈 더 벌고 갈게요</h3>
+                    <p>그 말, 3년 전에도 들었어. 그때 주식 시작한 사람들, 지금 어디 있어? 대부분 원금 회복 중이야. 오늘 당장 와. 내일은 없어.</p>
+                </div>
+                <div class="card">
+                    <h3>셔츠룸이 뭐가 특별한데?</h3>
+                    <p>직접 와서 느껴. 말로 설명할 수 없는 영역이야. 단 한 번의 경험이 네 기준을 완전히 바꿔놓을 거야.</p>
+                </div>
+                <div class="card">
+                    <h3>비용이 부담돼요</h3>
+                    <p>주식에 날린 돈 생각해봐. 그 돈이면 여기서 몇 번이고 즐길 수 있어. 투자 대비 만족도는 셔츠룸이 압승이다.</p>
+                </div>
+                <div class="card">
+                    <h3>혼자 가도 되나요?</h3>
+                    <p>오히려 혼자 오는 게 더 좋아. 방해받지 않고 온전히 경험에 집중할 수 있으니까. 우리가 다 케어해준다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="border-bottom: none;">
+        <div class="container" style="text-align: center;">
+            <h2 style="border-left: none; text-align: center;">지금 행동하라</h2>
+            <p style="font-size: 1.5rem; margin-bottom: 30px;">주식 차트는 내일도 있다. 하지만 오늘의 마포 셔츠룸은 지금뿐이다.</p>
+            <a href="tel:010-6279-0862" class="btn">☎ 010-6279-0862 바로 전화</a>
+            <p style="margin-top: 20px; font-size: 0.9rem; color: #666;">상담은 24시간 가능. 주식 얘기든 셔츠룸 얘기든 편하게 불러.</p>
+        </div>
+    </section>
+</body>
+</html>

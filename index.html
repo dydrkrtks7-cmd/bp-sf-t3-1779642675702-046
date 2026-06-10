@@ -1,214 +1,561 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>주식투자 리서치 및 기술 인프라 저널</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #3b82f6;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <title>마포 셔츠룸 | 주식투자 끝판왕 - SF T3 브루탈리즘</title>
+    <meta name="description" content="마포 셔츠룸, 주식투자와 셔츠룸의 완벽한 조합. 원초적 수익, 감각적 공간. 지금 010-6279-0862로 다이렉트 콜. SF T3 PBN 사이트.">
+    <meta name="keywords" content="마포 셔츠룸, 주식투자, 브루탈리즘, PBN, 마포, 셔츠룸 추천, 마포 주식, 투자 셔츠룸, sf-t3">
+    <link rel="canonical" href="https://sf-t3-1779642675702-046.vercel.app/">
+    <meta property="og:title" content="마포 셔츠룸 | 주식투자 끝판왕">
+    <meta property="og:description" content="마포 셔츠룸, 주식투자와 셔츠룸의 완벽한 조합. 원초적 수익, 감각적 공간.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sf-t3-1779642675702-046.vercel.app/">
+    <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect width='1200' height='630' fill='%23000'/%3E%3Ctext x='50%25' y='50%25' font-size='80' font-family='Impact' fill='%23ff3b00' text-anchor='middle' dy='.3em'%3E마포 셔츠룸%3C/text%3E%3C/svg%3E">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="마포 셔츠룸 | 주식투자 끝판왕">
+    <meta name="twitter:description" content="마포 셔츠룸, 주식투자와 셔츠룸의 완벽한 조합. 원초적 수익, 감각적 공간.">
+    <meta name="twitter:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect width='1200' height='630' fill='%23000'/%3E%3Ctext x='50%25' y='50%25' font-size='80' font-family='Impact' fill='%23ff3b00' text-anchor='middle' dy='.3em'%3E마포 셔츠룸%3C/text%3E%3C/svg%3E">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "마포 셔츠룸",
+        "description": "주식투자 테마의 감각적 셔츠룸. 마포구 최고의 브루탈리즘 공간.",
+        "telephone": "010-6279-0862",
+        "url": "https://sf-t3-1779642675702-046.vercel.app/",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "서울",
+            "addressRegion": "마포구",
+            "addressCountry": "KR"
+        },
+        "areaServed": "마포구",
+        "priceRange": "₩₩₩₩"
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.7;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    nav { display: flex; gap: 20px; }
-    nav a {
-      color: var(--muted-color);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1.2;
-      letter-spacing: -0.03em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
-      font-weight: 300;
-    }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(59, 130, 246, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
-      margin-bottom: 24px;
-    }
-    .posts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.2s ease;
-    }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted-color);
-    }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
-    }
-  </style>
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Impact, system-ui, sans-serif;
+            line-height: 1.2;
+            overflow-x: hidden;
+            max-width: none;
+        }
+        .container {
+            padding: 72px;
+            gap: 48px;
+            display: flex;
+            flex-direction: column;
+        }
+        section {
+            margin-bottom: 120px;
+        }
+        /* 타입 그래픽 */
+        h1 {
+            font-size: clamp(3.5rem, 12vw, 7rem);
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            color: #ff3b00;
+            border-bottom: 4px solid #ff3b00;
+            display: inline-block;
+            transform: skew(-5deg);
+            margin-bottom: 24px;
+        }
+        h2 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #ffffff;
+            border-left: 6px solid #ff3b00;
+            padding-left: 16px;
+            margin-bottom: 48px;
+            transform: rotate(-0.5deg);
+        }
+        h3 {
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 16px;
+            color: #ff3b00;
+        }
+        p {
+            font-family: system-ui, sans-serif;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin-bottom: 24px;
+            max-width: 60ch;
+        }
+        a {
+            color: #ff3b00;
+            text-decoration: underline;
+            text-underline-offset: 6px;
+            text-decoration-thickness: 3px;
+        }
+        a:hover {
+            color: #ffffff;
+            background-color: #ff3b00;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #ff3b00;
+            color: #000000;
+            font-family: Impact, system-ui, sans-serif;
+            font-size: 2rem;
+            padding: 20px 48px;
+            border: 4px solid #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            transform: skew(-8deg);
+            transition: all 0.1s ease;
+            margin-top: 16px;
+        }
+        .btn:hover {
+            background-color: #000000;
+            color: #ff3b00;
+            border-color: #ff3b00;
+            transform: skew(0deg) scale(1.05);
+        }
+        /* 그리드 */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 48px;
+        }
+        /* 카드 */
+        .card {
+            background-color: #111111;
+            padding: 48px 32px;
+            border: 4px solid #ffffff;
+            transform: rotate(0.5deg);
+        }
+        .card:nth-child(2n) {
+            transform: rotate(-0.8deg);
+            border-color: #ff3b00;
+        }
+        .card h3 {
+            margin-bottom: 8px;
+            font-size: 1.8rem;
+        }
+        .card .meta {
+            font-family: system-ui, sans-serif;
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 16px;
+        }
+        .stars {
+            color: #ff3b00;
+            font-size: 1.6rem;
+            letter-spacing: 4px;
+        }
+        .review-text {
+            font-family: system-ui, sans-serif;
+            font-style: italic;
+            border-left: 3px solid #ff3b00;
+            padding-left: 16px;
+        }
+        /* 헤더 */
+        header {
+            padding: 72px 72px 24px 72px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid #ff3b00;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: #ff3b00;
+            border: 4px solid #ffffff;
+            padding: 8px 24px;
+            transform: skew(-5deg);
+        }
+        nav {
+            display: flex;
+            gap: 36px;
+            align-items: center;
+        }
+        nav a {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #ffffff;
+            border-bottom: 3px solid transparent;
+            padding-bottom: 4px;
+        }
+        nav a:hover {
+            border-bottom-color: #ff3b00;
+            background: none;
+            color: #ff3b00;
+        }
+        .phone-link {
+            font-size: 1.8rem;
+            color: #ff3b00;
+            border: 3px solid #ff3b00;
+            padding: 8px 24px;
+            text-decoration: none;
+            transform: skew(-5deg);
+        }
+        .phone-link:hover {
+            background-color: #ff3b00;
+            color: #000000;
+        }
+        /* 햄버거 */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            padding: 8px;
+            border: 2px solid #ffffff;
+        }
+        .hamburger span {
+            width: 32px;
+            height: 4px;
+            background-color: #ffffff;
+            display: block;
+        }
+        #menu-toggle {
+            display: none;
+        }
+        /* 히어로 */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 120px 0 48px 0;
+            border-bottom: 6px solid #ff3b00;
+            margin-bottom: 80px;
+            position: relative;
+        }
+        .hero .hero-sub {
+            font-size: 1.8rem;
+            color: #ffffff;
+            border: 3px solid #ffffff;
+            padding: 12px 32px;
+            transform: skew(4deg);
+            margin-top: -16px;
+            background-color: #000000;
+        }
+        .hero .big-number {
+            font-size: 12rem;
+            color: #ff3b00;
+            opacity: 0.3;
+            position: absolute;
+            right: 0;
+            top: -40px;
+            line-height: 1;
+            pointer-events: none;
+        }
+        /* 비대칭 블록 */
+        .asymmetric {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 48px;
+        }
+        .asymmetric-reverse {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 48px;
+        }
+        .overlap-box {
+            background-color: #111111;
+            border: 4px solid #ff3b00;
+            padding: 48px;
+            margin-left: -48px;
+            margin-top: -24px;
+            position: relative;
+            z-index: 2;
+        }
+        .full-bleed {
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            padding: 48px 72px;
+            background: repeating-linear-gradient(45deg, #111, #111 20px, #1a1a1a 20px, #1a1a1a 40px);
+            border-top: 6px solid #ff3b00;
+            border-bottom: 6px solid #ff3b00;
+        }
+        /* 푸터 */
+        footer {
+            border-top: 6px solid #ff3b00;
+            padding: 72px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+        footer p {
+            font-family: system-ui, sans-serif;
+            font-size: 1rem;
+            color: #888;
+        }
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 36px;
+                gap: 32px;
+            }
+            section {
+                margin-bottom: 80px;
+            }
+            header {
+                padding: 36px 36px 16px 36px;
+            }
+            .logo {
+                font-size: 1.6rem;
+            }
+            .hamburger {
+                display: flex;
+            }
+            nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #000000;
+                border: 3px solid #ff3b00;
+                padding: 24px;
+                gap: 16px;
+                margin-top: 16px;
+            }
+            #menu-toggle:checked + .hamburger + nav {
+                display: flex;
+            }
+            nav a {
+                font-size: 1.2rem;
+            }
+            .phone-link {
+                font-size: 1.2rem;
+                padding: 4px 16px;
+            }
+            .hero .big-number {
+                font-size: 5rem;
+                top: 0;
+                right: 10px;
+            }
+            h1 {
+                font-size: 2.8rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            .grid-2, .grid-3, .asymmetric, .asymmetric-reverse {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .overlap-box {
+                margin-left: 0;
+                margin-top: 0;
+            }
+            .btn {
+                font-size: 1.5rem;
+                padding: 16px 32px;
+            }
+            footer {
+                padding: 36px;
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
     <header>
-      <a href="/" class="logo">T3.SWISS</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
+        <div class="logo">마포셔츠룸</div>
+        <input type="checkbox" id="menu-toggle" style="display:none;">
+        <label for="menu-toggle" class="hamburger">
+            <span></span><span></span><span></span>
+        </label>
+        <nav>
+            <a href="#">홈</a>
+            <a href="#">투자</a>
+            <a href="#">셔츠룸</a>
+            <a href="#">리뷰</a>
+            <a href="tel:010-6279-0862" class="phone-link">📞 010-6279-0862</a>
+        </nav>
     </header>
-    <main>
-      <div class="meta-tag">SWISS ACCENTED GRID SYSTEM</div>
-      <h1>주식투자 리서치 및 기술 인프라 저널</h1>
-      <div class="content">
-        환영합니다. 본 블로그 저널은 현대적이고 세련된 <strong>주식투자</strong> 분야의 실용 정보와 심도 있는 기술 에세이를 기록하는 전문 아카이브 공간입니다. 아래의 엄선된 아티클 리스트를 통해 다양한 인사이트를 확인하시기 바랍니다.
-      </div>
-      
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-        <a href="posts/normal-1.html" class="post-card">
-          <h3>주식투자: 주식투자: 배당주 투자로 은퇴 연금 마련하기</h3>
-          <p>불확실성이 극대화되는 거시경제 파동 속에서 안정적이고 마르지 않는 고정 배당 수익을 가져다주는 우량 배당 귀족주 장기 투자는 직장인들에게 가장 든든한 금융 방패입니다. 배당 복리 ...</p>
-        </a>
-      
 
-        <a href="posts/normal-2.html" class="post-card">
-          <h3>주식투자: 주식투자: 코스트 에버리지 우량주 분할 매수</h3>
-          <p>시장 타이밍을 예측해 최저점에 주식을 매수하려는 헛된 시도보다는, 매월 일정한 시기에 정해진 금액만큼 대형 지수 추종 ETF나 우량 기업의 지분을 꾸준히 사 모으는 분할 매수 적립...</p>
-        </a>
-      
+    <main class="container">
+        <!-- 히어로 -->
+        <section class="hero">
+            <div class="big-number">⏤</div>
+            <h1>마포 셔츠룸<br>주식투자</h1>
+            <div class="hero-sub">원초적 수익, 감각적 공간</div>
+            <p style="max-width:70ch; margin-top:32px;">주식투자는 감정 싸움이다. 마포 셔츠룸은 그 감정을 극한으로 밀어붙이는 공간. 브루탈리즘 건축처럼 투명하고 거침없는 수익 구조. 지금 전화해.</p>
+            <a href="tel:010-6279-0862" class="btn">📞 010-6279-0862 바로콜</a>
+        </section>
 
-        <a href="posts/normal-3.html" class="post-card">
-          <h3>주식투자: 주식투자: 자산 배분 전략과 위험 분산</h3>
-          <p>완벽한 위험 통제를 달성하는 자산 배분의 핵심은 주식뿐만 아니라 안전한 실물 자산 및 대체 자산에 적정한 밸런스 비중을 유지하는 것입니다. 이는 일시적 하락 파동에서도 내 멘탈과 ...</p>
-        </a>
-      
+        <!-- 비대칭 섹션: 투자 철학 -->
+        <section class="asymmetric">
+            <div>
+                <h2>투자 철학</h2>
+                <p>우리는 부드러운 말로 포장하지 않는다. 주식투자는 피와 땀이다. 마포 셔츠룸은 그 피와 땀을 셔츠에 묻히는 장소. 3-4px 실선처럼 명확한 수익률, 원색적인 리스크 관리. 시스템 모노 폰트처럼 단순한 전략.</p>
+                <div style="border:4px solid #ff3b00; padding:24px; margin-top:24px; transform:skew(2deg);">
+                    <span style="font-size:3rem; color:#ff3b00;">📈 +247%</span>
+                    <p style="margin:0; font-size:1rem;">2024년 마포 셔츠룸 방문객 평균 수익률 (자체 조사)</p>
+                </div>
+            </div>
+            <div class="overlap-box">
+                <h3>룰 오브 셔츠</h3>
+                <ul style="font-family:system-ui; list-style:none; font-size:1.2rem;">
+                    <li style="border-bottom:2px solid #ff3b00; padding:12px 0;">✔ 절대 손절하지 마라</li>
+                    <li style="border-bottom:2px solid #ff3b00; padding:12px 0;">✔ 셔츠는 검은색만</li>
+                    <li style="border-bottom:2px solid #ff3b00; padding:12px 0;">✔ 전화는 무조건 받아라</li>
+                    <li style="border-bottom:2px solid #ff3b00; padding:12px 0;">✔ 010-6279-0862</li>
+                </ul>
+            </div>
+        </section>
 
-        <a href="posts/juice-1.html" class="post-card">
-          <h3>주식투자 전문가들이 엄선한 마포 셔츠룸 상세 비법 가이드</h3>
-          <p>성공적인 주식투자를 위해 우량 기업의 재무제표와 분기 배당 성향을 꼼꼼하게 연구하다 보면, 리스크의 철저한 분산을 보장하는 것은 오직 변동 없는 오프라인 실물 경제의 든든한 고정 ...</p>
-        </a>
-      
+        <!-- UGC 리뷰 섹션 -->
+        <section>
+            <h2>🔥 실제 방문자 후기</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>🐂 황소개미</h3>
+                    <div class="meta">2025-02-14</div>
+                    <div class="stars">★★★★★</div>
+                    <div class="review-text">"마포 셔츠룸에서 삼성전자 10억 수익. 셔츠 한 벌 값으로 주식 강의 듣는 기분. 원초적이다."</div>
+                </div>
+                <div class="card">
+                    <h3>🦅 독수리5</h3>
+                    <div class="meta">2025-01-28</div>
+                    <div class="stars">★★★★☆</div>
+                    <div class="review-text">"분위기가 죽여준다. 벽에 걸린 차트 그래프가 실제 내 포트폴리오보다 더 빨갛다. 재방문 의사 200%."</div>
+                </div>
+                <div class="card">
+                    <h3>🔥 불장구</h3>
+                    <div class="meta">2024-12-11</div>
+                    <div class="stars">★★★★★</div>
+                    <div class="review-text">"셔츠룸인데 주식 얘기만 3시간. 사장님이 알려준 종목 3배. 셔츠는 덤."</div>
+                </div>
+                <div class="card">
+                    <h3>💀 데드풀트레이더</h3>
+                    <div class="meta">2024-11-03</div>
+                    <div class="stars">★★★★★</div>
+                    <div class="review-text">"여기 오면 손절할 생각 버려라. 원초적 본능으로 매수하게 된다. 마포 셔츠룸 짱."</div>
+                </div>
+                <div class="card">
+                    <h3>🧢 캡모자</h3>
+                    <div class="meta">2024-10-19</div>
+                    <div class="stars">★★★☆☆</div>
+                    <div class="review-text">"주식 얘기만 해서 지루할 수도. 근데 수익률은 진짜. 별점 3개는 셔츠가 좀 타이트해서."</div>
+                </div>
+            </div>
+        </section>
 
-        <a href="posts/juice-2.html" class="post-card">
-          <h3>주식투자 전문가들이 엄선한 마포 셔츠룸 상세 비법 가이드</h3>
-          <p>성공적인 주식투자를 위해 우량 기업의 재무제표와 분기 배당 성향을 꼼꼼하게 연구하다 보면, 리스크의 철저한 분산을 보장하는 것은 오직 변동 없는 오프라인 실물 경제의 든든한 고정 ...</p>
-        </a>
-      
-        </div>
-      </div>
+        <!-- 왜 마포 셔츠룸인가 -->
+        <section class="full-bleed">
+            <div style="max-width:1200px; margin:0 auto;">
+                <h2 style="color:#ff3b00; border-left-color:#ffffff;">왜 마포 셔츠룸인가</h2>
+                <div class="grid-2" style="gap:64px;">
+                    <div>
+                        <h3>01. 위치</h3>
+                        <p>마포구 중심. 홍대입구에서 걸어서 5분. 주식투자자들이 모이는 지리적 허브. 셔츠룸과 주식, 두 마리 토끼.</p>
+                    </div>
+                    <div>
+                        <h3>02. 시스템</h3>
+                        <p>3-4px 실선처럼 명확한 시스템. 모바일 차트 4개 동시 송출. 48인치 모니터 6대. 실시간 호가창이 셔츠 대신.</p>
+                    </div>
+                    <div>
+                        <h3>03. 사람</h3>
+                        <p>브루탈리즘을 아는 사람들. 감성팔이 없다. 숫자로 말한다. 셔츠는 옷이 아니라 태도다.</p>
+                    </div>
+                    <div>
+                        <h3>04. 전화</h3>
+                        <p>010-6279-0862. 이 번호 외우는 순간 수익률이 바뀐다. 지금 당장 전화해.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 비대칭 리버스: 서비스 -->
+        <section class="asymmetric-reverse">
+            <div class="overlap-box" style="margin-left:0; margin-right:-48px;">
+                <h3>서비스 구성</h3>
+                <div style="display:flex; flex-direction:column; gap:16px; font-size:1.4rem;">
+                    <span>🔥 입장료: 주식 계좌 인증</span>
+                    <span>🔥 셔츠 대여: 무료 (블랙 한정)</span>
+                    <span>🔥 음료: 하루 1잔 무료 (더치커피)</span>
+                    <span>🔥 특전: 당일 추천 종목 문자</span>
+                </div>
+            </div>
+            <div>
+                <h2>서비스</h2>
+                <p>셔츠룸에 주식투자를 더한 것은 우리가 처음이다. 마포에서 가장 거친 투자 공간. 셔츠 한 벌 걸치고 오면 나머지는 우리가 책임진다. 손님은 오직 숫자와 싸우면 된다.</p>
+                <div style="border:4px solid #ffffff; padding:16px; margin-top:24px; text-align:center;">
+                    <span style="font-size:2rem; color:#ff3b00;">☎️ 010-6279-0862</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section style="text-align:center; border:6px solid #ff3b00; padding:72px 48px; transform:skew(-1deg);">
+            <h2 style="border:none; font-size:4rem; color:#ff3b00;">지금 바로 전화</h2>
+            <p style="margin:0 auto 32px; font-size:1.8rem;">마포 셔츠룸, 주식투자의 새로운 패러다임.</p>
+            <a href="tel:010-6279-0862" class="btn" style="font-size:3rem; padding:24px 72px;">010-6279-0862</a>
+        </section>
     </main>
-    <footer>
-      <div>&copy; 2026 T3.SWISS. ALL RIGHTS RESERVED.</div>
+
+    
+
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
       <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">마포 셔츠룸 선택 전에 확인할 체크리스트와 실패 사례</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">제목: 창작한 제목: "월 매출 3000원 찍고도 폐업했던 마포 셔츠룸의 실패 사례와 살아남은 비결" 아, 진짜... 지난해 홍대 상권에서 폐업한 업소들이 공통된 원인과 살아남은 곳들의 차별화 전략에 대해 알아보자. ### 소제목 1#### 실패 사례 분석: 마포 셔츠</p>
       </div>
-    </footer>
+      <a href="posts/checklist-001-s4e9ur.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">마포 셔츠룸에 관한 흔한 오해, 직접 확인해보니 달랐던 점</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">아, 진짜 2021년 겨울, 서버실 온도가 42도까지 올라갔다. 그때 NSA 프리즘 프로그램 슬라이드 중 언론이 다루지 않은 슬라이드 번호 7장의 내용을 보고 스노 Snowden라는 이름에 대해 처음 알았다. ### 구체적 니치 콘텐츠 작성#### 문제 자세히 설명하고</p>
+      </div>
+      <a href="posts/myth-002-s4e9ur.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
   </div>
+</section>
+<footer>
+        <div>
+            <p style="font-family:Impact; font-size:1.4rem; color:#ff3b00;">마포 셔츠룸</p>
+            <p>서울 마포구 · 주식투자 전문 셔츠룸</p>
+        </div>
+        <div>
+            <p>© 2025 마포 셔츠룸. All rights reserved.</p>
+            <p>PBN Tier3 · SF T3 · 브루탈리즘 디자인</p>
+        </div>
+        <div>
+            <a href="tel:010-6279-0862" style="font-size:1.6rem; border:3px solid #ff3b00; padding:8px 24px; text-decoration:none;">📞 010-6279-0862</a>
+        </div>
+    </footer>
 </body>
 </html>
